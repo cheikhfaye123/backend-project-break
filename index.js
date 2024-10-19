@@ -1,4 +1,5 @@
 const express = require('express');
+const productController = require('./controllers/productController')
 const mongoose = require('mongoose');
 const connectDB = require('./config/db');
 const dotenv = require('dotenv');
@@ -36,6 +37,7 @@ app.get('/login', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'login.html'));
 });
 
+//router.get('/category/:category', showProductsByCategory); 
 
 
 

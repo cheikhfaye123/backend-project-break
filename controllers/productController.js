@@ -195,7 +195,13 @@ const deleteProduct = async (req, res) => {
     });
   }
 };
-
+const showProductsByCategory = async (req, res) => {
+  const { category } = req.params;
+  const products = await Product.find({ category }); // Filter products by category
+  const productCards = getProductCards(products);
+  const html = baseHtml() + getNavBar(false) + productCards + `</body></html>`;
+  res.send(html);
+};
 
 module.exports = { 
   showProducts, 
@@ -204,5 +210,6 @@ module.exports = {
   createProduct, 
   showEditProduct, 
   updateProduct, 
-  deleteProduct 
+  deleteProduct,
+  showProductsByCategory
 };

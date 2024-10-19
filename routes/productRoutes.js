@@ -8,7 +8,8 @@ const {
   createProduct,
   showEditProduct,
   updateProduct,
-  deleteProduct
+  deleteProduct,
+  showProductsByCategory
 } = require('../controllers/productController');
 
 
@@ -20,6 +21,7 @@ router.delete('/dashboard/:productId', deleteProduct);
 
 router.get('/dashboard', showDashboard); 
 router.get('/:productId', showProductById); 
+router.get('/category/:category', showProductsByCategory);
 
 
 router.get('/', showProducts); 
