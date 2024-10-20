@@ -13,6 +13,7 @@ const cookieParser = require('cookie-parser');
 const User = require('./models/user'); // Import du modèle User
 const bcrypt = require('bcrypt');
 
+
 dotenv.config();
 const app = express();
 connectDB();

@@ -17,11 +17,12 @@ const getNavBar = (isDashboard) => `
     <h1>${isDashboard ? 'Dashboard' : 'Produits'}</h1>
     <a class="nav-link" href="/products">Voir Produits</a>
     <a class="nav-link" href="/products/dashboard">Tableau de bord</a>
-    <a class="nav-link" href="/products/dashboard">Camisetas</a>
-    <a class="nav-link" href="/products/dashboard">Pantalones</a>
-    <a class="nav-link" href="/products/dashboard">Accesorios</a>
+    <a class="nav-link" href="/products/category/Camisetas">Camisetas</a>
+    <a class="nav-link" href="/products/category/Pantalones">Pantalones</a>
+    <a class="nav-link" href="/products/category/Accesorios">Accesorios</a>
   </nav>
 `;
+
 
 
 const getProductCards = (products, isDashboard) => {
