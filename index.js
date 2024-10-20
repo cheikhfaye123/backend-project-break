@@ -26,6 +26,9 @@ app.use(express.static('public'));
 app.use('/images', express.static(path.join(__dirname, 'public/images')));
 
 app.use('/products', productRoutes);
+app.get('/', (req, res) => {
+    res.redirect('/products/dashboard'); 
+});
 app.get('/products/dashboard', productController.showDashboard);
 
 

@@ -107,7 +107,7 @@ const showProductById = async (req, res) => {
 const showDashboard = async (req, res) => {
   const products = await Product.find();
   const productCards = getProductCards(products, true);
-  const html = baseHtml() + getNavBar(true) + productCards + getDeleteProductScript`</body></html>`;
+  const html = baseHtml() + getNavBar(true) + productCards + getDeleteProductScript() + `</body></html>`;
   res.send(html);
 };
 
