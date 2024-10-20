@@ -26,6 +26,7 @@ app.use(express.static('public'));
 app.use('/images', express.static(path.join(__dirname, 'public/images')));
 
 app.use('/products', productRoutes);
+app.get('/products/dashboard', productController.showDashboard);
 
 
 app.get('/register', (req, res) => {
@@ -37,7 +38,7 @@ app.get('/login', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'login.html'));
 });
 
-//router.get('/category/:category', showProductsByCategory); 
+
 
 
 
