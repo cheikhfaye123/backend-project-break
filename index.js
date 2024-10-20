@@ -10,7 +10,7 @@ const authRoutes = require('./routes/authRoutes');
 const authMiddleware = require('./middlewares/authMiddleware');
 const path = require('path');
 const cookieParser = require('cookie-parser');
-const User = require('./models/User'); // Import du modèle User
+const User = require('./models/user'); // Import du modèle User
 const bcrypt = require('bcrypt');
 
 dotenv.config();
